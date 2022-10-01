@@ -17,8 +17,7 @@ module.exports = {
         ],
         alias: {
           '@interfaces': './src/interfaces',
-          '@slices': './src/redux/slices',
-          '@redux': './src/redux/config',
+          '@redux': './src/redux',
           '@config': './src/config',
         },
       },

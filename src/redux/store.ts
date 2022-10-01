@@ -4,8 +4,8 @@ import {
   Action,
   StoreEnhancer,
 } from '@reduxjs/toolkit';
-import ReactotronConfig from '../../../ReactotronConfig';
-import bankSlice from '@slices/bankSlice';
+import ReactotronConfig from '@config/ReactotronConfig';
+import bankSlice from '@redux/bankSlice';
 
 const enhancers: StoreEnhancer[] = [];
 if (ReactotronConfig.createEnhancer) {

@@ -19,6 +19,7 @@ module.exports = {
           '@interfaces': './src/interfaces',
           '@slices': './src/redux/slices',
           '@redux': './src/redux/config',
+          '@config': './src/config',
         },
       },
     ],

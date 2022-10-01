@@ -10,7 +10,7 @@
 
 import React from 'react';
 import {Provider} from 'react-redux';
-import {store} from './src/redux/config/store';
+import {store} from '@redux/store';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 const App = () => {

@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {BankObject} from '../../interfaces/bank';
+import {BankObject} from '@interfaces/bank';
 
 export interface bankState {
   listBank: BankObject[];

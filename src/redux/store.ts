@@ -13,7 +13,7 @@ if (ReactotronConfig.createEnhancer) {
 }
 export const store = configureStore({
   reducer: {
-    bankSlice,
+    bank: bankSlice,
   },
   enhancers,
 });

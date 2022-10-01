@@ -11,24 +11,14 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {store} from '@redux/store';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import ListBank from '@screens/ListBank';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <SafeAreaView>
-        <Text style={[styles.sectionDescription]}>hi</Text>
-      </SafeAreaView>
+      <ListBank />
     </Provider>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-});
 
 export default App;

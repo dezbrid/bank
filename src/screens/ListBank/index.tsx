@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
-import {FlatList, SafeAreaView, ListRenderItem, View, Text} from 'react-native';
+import {FlatList, SafeAreaView, ListRenderItem} from 'react-native';
 import {useAppDispatch, useAppSelector} from '@redux/hooks';
 import {bankAsync, listBank} from '@redux/bankSlice';
 import {BankObject} from '@interfaces/bank';
 import {ListKeyExtractor} from '@interfaces/generic';
 
-//import styles from './styles';
+import Bank from './components/Bank';
+import styles from './styles';
 
 function ListBank() {
   const dispatch = useAppDispatch();
@@ -15,14 +16,10 @@ function ListBank() {
       dispatch(bankAsync());
     }
   }, [dispatch, banks]);
-  const renderItem: ListRenderItem<BankObject> = ({item}) => (
-    <View>
-      <Text>{item.bankName}</Text>
-    </View>
-  );
+  const renderItem: ListRenderItem<BankObject> = ({item}) => <Bank {...item} />;
   const keyExtractor: ListKeyExtractor<BankObject> = (_, i) => i.toString();
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <FlatList<BankObject>
         data={banks}
         renderItem={renderItem}

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListBank /> <ListBank /> snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 5,
+      "elevation": 3,
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "marginHorizontal": 20,
+      "paddingHorizontal": 20,
+      "paddingVertical": 15,
+      "shadowColor": "#0D0D0D",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
+  }
+>
+  <Image
+    resizeMode="stretch"
+    source={
+      Object {
+        "uri": "https://firebasestorage.googleapis.com/v0/b/stagingpagatodo-286214.appspot.com/o/Challenge%2Flogo-pagatodo.jpeg?alt=media&token=38b6ac4d-85ac-4288-bada-88eb5a0dec20",
+      }
+    }
+    style={
+      Object {
+        "height": 80,
+        "width": 55,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginLeft": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#4A4A4A",
+          "fontSize": 17,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Paga Todo
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#4A4A4A",
+          "fontSize": 15,
+          "fontWeight": "500",
+          "marginTop": 3,
+        }
+      }
+    >
+      Banco Paga Todo es Para Todos
+    </Text>
+  </View>
+</View>
+`;

@@ -17,7 +17,6 @@ import {
 } from 'redux-persist';
 import ReactotronConfig from '@config/ReactotronConfig';
 import bankSlice from '@redux/bankSlice';
-//import thunk from 'redux-thunk';
 
 const enhancers: StoreEnhancer[] = [];
 if (ReactotronConfig.createEnhancer) {

@@ -5,12 +5,19 @@ import {
   StoreEnhancer,
 } from '@reduxjs/toolkit';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-//import storage from 'redux-persist/lib/storage';
 import {combineReducers} from 'redux';
-import {persistReducer} from 'redux-persist';
+import {
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
 import ReactotronConfig from '@config/ReactotronConfig';
 import bankSlice from '@redux/bankSlice';
-import thunk from 'redux-thunk';
+//import thunk from 'redux-thunk';
 
 const enhancers: StoreEnhancer[] = [];
 if (ReactotronConfig.createEnhancer) {
@@ -30,7 +37,12 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: [thunk],
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
   enhancers,
 });
 

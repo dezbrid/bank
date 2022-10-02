@@ -1,29 +1,21 @@
 import {StyleSheet} from 'react-native';
-
+import {white, darkGray} from '@constants/colors';
+import {GENERAL_BOX_SHADOW} from '@constants/commonStyles';
 const HEIGHT_IMAGE = 90;
 const WIDTH_IMAGE = 55;
 const SIZES = {
   REGULAR: 15,
   TITLE: 17,
 };
-const COLORS = {
-  codGray: '#0D0D0D',
-  white: '#FFFFFF',
-  tundora: '#4A4A4A',
-};
 
 export default StyleSheet.create({
   container: {
+    ...GENERAL_BOX_SHADOW,
     flexDirection: 'row',
     borderRadius: 5,
-    shadowOffset: {width: 0, height: 1},
-    shadowOpacity: 1,
-    shadowRadius: 1,
-    shadowColor: COLORS.codGray,
-    backgroundColor: COLORS.white,
+    backgroundColor: white,
     paddingVertical: 15,
     paddingHorizontal: 20,
-    elevation: 3,
   },
   image: {
     height: HEIGHT_IMAGE,
@@ -37,12 +29,12 @@ export default StyleSheet.create({
   bankName: {
     fontSize: SIZES.TITLE,
     fontWeight: 'bold',
-    color: COLORS.tundora,
+    color: darkGray,
   },
   description: {
     fontSize: SIZES.REGULAR,
     fontWeight: '500',
-    color: COLORS.tundora,
+    color: darkGray,
   },
   ages: {
     flexDirection: 'row',

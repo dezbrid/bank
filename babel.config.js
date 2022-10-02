@@ -21,6 +21,7 @@ module.exports = {
           '@config': './src/config',
           '@screens': './src/screens',
           '@mocks': './__mocks__',
+          '@constants': './src/constants',
         },
       },
     ],

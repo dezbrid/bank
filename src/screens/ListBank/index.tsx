@@ -6,6 +6,8 @@ import {BankObject} from '@interfaces/bank';
 import {ListKeyExtractor} from '@interfaces/generic';
 
 import Bank from './components/Bank';
+import BarSearch from './components/BarSearch';
+
 import styles from './styles';
 
 function ListBank() {
@@ -21,6 +23,7 @@ function ListBank() {
   const separator = () => <View style={styles.separator} />;
   return (
     <SafeAreaView style={styles.container}>
+      <BarSearch />
       <FlatList<BankObject>
         data={banks}
         renderItem={renderItem}

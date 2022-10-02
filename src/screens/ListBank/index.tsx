@@ -11,8 +11,10 @@ function ListBank() {
   const dispatch = useAppDispatch();
   const banks = useAppSelector(listBank);
   useEffect(() => {
-    dispatch(bankAsync());
-  }, [dispatch]);
+    if (banks.length === 0) {
+      dispatch(bankAsync());
+    }
+  }, [dispatch, banks]);
   const renderItem: ListRenderItem<BankObject> = ({item}) => (
     <View>
       <Text>{item.bankName}</Text>

@@ -1,8 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-const HEIGHT_IMAGE = 80;
+const HEIGHT_IMAGE = 90;
 const WIDTH_IMAGE = 55;
-const SPACING = 20;
 const SIZES = {
   REGULAR: 15,
   TITLE: 17,
@@ -22,11 +21,9 @@ export default StyleSheet.create({
     shadowRadius: 1,
     shadowColor: COLORS.codGray,
     backgroundColor: COLORS.white,
-    marginHorizontal: SPACING,
     paddingVertical: 15,
-    paddingHorizontal: SPACING,
+    paddingHorizontal: 20,
     elevation: 3,
-    marginBottom: 10,
   },
   image: {
     height: HEIGHT_IMAGE,
@@ -44,7 +41,11 @@ export default StyleSheet.create({
   description: {
     fontSize: SIZES.REGULAR,
     fontWeight: '500',
-    marginTop: 3,
     color: COLORS.tundora,
+  },
+  ages: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 });

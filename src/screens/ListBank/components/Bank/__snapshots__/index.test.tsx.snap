@@ -8,8 +8,6 @@ exports[`<Bank /> <Bank /> snapshot 1`] = `
       "borderRadius": 5,
       "elevation": 3,
       "flexDirection": "row",
-      "marginBottom": 10,
-      "marginHorizontal": 20,
       "paddingHorizontal": 20,
       "paddingVertical": 15,
       "shadowColor": "#0D0D0D",
@@ -31,7 +29,7 @@ exports[`<Bank /> <Bank /> snapshot 1`] = `
     }
     style={
       Object {
-        "height": 80,
+        "height": 90,
         "width": 55,
       }
     }
@@ -61,12 +59,43 @@ exports[`<Bank /> <Bank /> snapshot 1`] = `
           "color": "#4A4A4A",
           "fontSize": 15,
           "fontWeight": "500",
-          "marginTop": 3,
         }
       }
     >
       Banco Paga Todo es Para Todos
     </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 17,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        edad: 
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 15,
+            "fontWeight": "500",
+          }
+        }
+      >
+        10
+      </Text>
+    </View>
   </View>
 </View>
 `;

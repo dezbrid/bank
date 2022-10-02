@@ -6,11 +6,16 @@ exports[`<ListBank /> <ListBank /> snapshot 1`] = `
   style={
     Object {
       "flex": 1,
-      "marginTop": 0,
     }
   }
 >
   <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    contentContainerStyle={
+      Object {
+        "padding": 20,
+      }
+    }
     data={Array []}
     getItem={[Function]}
     getItemCount={[Function]}

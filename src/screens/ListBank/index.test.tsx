@@ -3,18 +3,16 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import ListBank from './index';
-import renderer from 'react-test-renderer';
+import {render} from '@testing-library/react-native';
 import {store} from '@redux/store';
 
 describe('<ListBank />', () => {
   it('<ListBank /> snapshot', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <ListBank />
-        </Provider>,
-      )
-      .toJSON();
+    const tree = render(
+      <Provider store={store}>
+        <ListBank />
+      </Provider>,
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

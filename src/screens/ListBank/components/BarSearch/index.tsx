@@ -16,7 +16,6 @@ function BarSearch() {
   const handleChangeText = (text: string) => {
     setSearch(text);
   };
-  const handleOnSubmitEditing = () => {};
   return (
     <View style={[styles.container, styles.containterShadow]}>
       <Image
@@ -31,7 +30,6 @@ function BarSearch() {
         style={styles.inputStyle}
         placeholder={'Search'}
         onChangeText={handleChangeText}
-        onSubmitEditing={handleOnSubmitEditing}
         value={search}
       />
       {search.length > 0 && (

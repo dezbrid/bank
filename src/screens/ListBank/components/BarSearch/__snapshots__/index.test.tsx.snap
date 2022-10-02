@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BarSearch /> <BarSearch /> snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 100,
+        "flexDirection": "row",
+        "height": 45,
+        "margin": 20,
+        "paddingLeft": 10,
+        "paddingRight": 15,
+      },
+      Object {
+        "borderColor": "#F1F1F1",
+        "borderWidth": 1,
+        "shadowColor": "#939393",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      },
+    ]
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../src/screens/ListBank/components/BarSearch/assets/ic_search.png",
+      }
+    }
+    style={
+      Object {
+        "height": 25,
+        "marginRight": 10,
+        "width": 25,
+      }
+    }
+  />
+  <TextInput
+    autoComplete="off"
+    autoCorrect={false}
+    onChangeText={[Function]}
+    placeholder="Search"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    value=""
+  />
+</View>
+`;

@@ -2,12 +2,12 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import {RootState} from '@redux/store';
 import {BankObject} from '@interfaces/bank';
 
-export interface bankState {
+export interface BankState {
   listBank: BankObject[];
   loadingList: boolean;
 }
 
-const initialState: bankState = {
+const initialState: BankState = {
   listBank: [],
   loadingList: false,
 };

@@ -1,15 +1,17 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createSlice, createAsyncThunk, PayloadAction} from '@reduxjs/toolkit';
 import {RootState} from '@redux/store';
 import {BankObject} from '@interfaces/bank';
 
 export interface BankState {
   listBank: BankObject[];
   loadingList: boolean;
+  banks: BankObject[];
 }
 
 const initialState: BankState = {
   listBank: [],
   loadingList: false,
+  banks: [],
 };
 export const bankAsync = createAsyncThunk(
   'banks',
@@ -27,7 +29,15 @@ export const bankSlice = createSlice({
   initialState,
   reducers: {
     getOriginalList: state => {
-      state.listBank = state.listBank;
+      state.banks = state.listBank;
+    },
+    filterByName: (state, action: PayloadAction<string>) => {
+      state.banks = state.listBank.filter(bank => {
+        return bank.bankName.toLowerCase().includes(action.payload);
+      });
+      if (action.payload.trim().length === 0) {
+        state.banks = state.listBank;
+      }
     },
   },
   extraReducers: builder => {
@@ -38,13 +48,15 @@ export const bankSlice = createSlice({
       .addCase(bankAsync.fulfilled, (state, action) => {
         state.loadingList = false;
         state.listBank = action.payload;
+        state.banks = action.payload;
       })
       .addCase(bankAsync.rejected, state => {
         state.loadingList = false;
       });
   },
 });
-export const {getOriginalList} = bankSlice.actions;
-export const listBank = (state: RootState) => state.bank.listBank;
+export const {getOriginalList, filterByName} = bankSlice.actions;
+export const listBank = (state: RootState) => state.bank.banks;
+export const orignialListBank = (state: RootState) => state.bank.listBank;
 
 export default bankSlice.reducer;

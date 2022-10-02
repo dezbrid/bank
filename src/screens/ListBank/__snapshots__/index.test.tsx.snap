@@ -52,10 +52,11 @@ exports[`<ListBank /> <ListBank /> snapshot 1`] = `
       }
     />
     <TextInput
+      autoCapitalize="none"
       autoComplete="off"
       autoCorrect={false}
       onChangeText={[Function]}
-      placeholder="Search"
+      placeholder="Search By Name"
       style={
         Object {
           "flex": 1,

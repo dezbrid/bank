@@ -32,6 +32,7 @@ export default StyleSheet.create({
   containerText: {
     marginLeft: 15,
     flex: 1,
+    justifyContent: 'space-between',
   },
   bankName: {
     fontSize: SIZES.TITLE,
